@@ -1,6 +1,6 @@
 <?php
 
-include "view/header.php";
+include "view/partials/header.php";
 
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
@@ -21,4 +21,4 @@ if (isset($_GET["act"])) {
     include "view/HomeView.php";
 }
 
-include "view/footer.php";
+include "view/partials/footer.php";

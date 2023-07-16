@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Joti+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Joti+One&display=swap");
+
+:root {
+    /* color */
+    --background-bright-green: rgb(243, 255, 224);
+    --content-dark-navy: rgb(11, 36, 74);
+    --logo-green: rgb(100, 152, 125);
+    --logo-hover-darker-green: rgb(54, 101, 76);
+    --box-color-middle-green: rgb(213, 237, 203);
+    /* font */
+    --regular-font: "Itim", cursive;
+    --logo-font: "Joti One", cursive;
+}
+
+/* * General styles --------------------------------------------------------------- */
 
 * {
-    background-color: #f5ffe4;
-    color: #031D44;
-    font-family: 'Itim', cursive;
+    background-color: var(--background-bright-green);
+    color: var(--content-dark-navy);
+    font-family: var(--regular-font);
     font-size: 28px;
     text-align: center;
     text-decoration: none;
@@ -14,96 +28,89 @@
 }
 
 body {
-    height: 100%;
-    margin: 1% 2%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
-/* 
-#wrapper {
-    width: 1000px;
-    margin: 0 auto;
-} */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 5px 20px;
+}
 
 #logo {
-    color: #6D9E84;
-    font-family: 'Joti One', cursive;
-    font-size: 36px;
+    color: var(--logo-green);
+    font-family: var(--logo-font);
+    font-size: 32px;
 }
 
-nav {
+header #logo {
     float: left;
+    top: 3%;
+    left: 3%;
 }
 
-nav #logo {
-    position: fixed;
-    float: left;
-    color: #6D9E84;
-    font-family: 'Joti One', cursive;
-    font-size: 36px;
-}
-
-.content {
-    /* display: block;
-    margin-top: 10%;
+main {
+    width: 100%;
+    text-align: center;
     padding: 5%;
-    position: fixed; */
-    position: fixed;
-    height: fit-content;
-    width: 80%;
-    top: 25%;
-    left: 10%;
 }
 
-.content .welcome p {
+/* * HomeView --------------------------------------------------------------- */
+
+.content-home-view .welcome p {
     font-size: 56px;
+}
+
+.content-home-view .intro {
     margin: 15px 0;
 }
 
-.content .intro {
+.content-home-view .btns {
     margin: 15px 0;
 }
 
-
-.content .btns {
-    margin: 15px 0;
-}
-
-.content input {
+.content-home-view input {
     margin: 20px;
     padding: 5px 15px 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #6D9E84;
-    color: #F3FFE0;
+    background-color: var(--logo-green);
+    color: var(--background-bright-green);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
     cursor: pointer;
 }
 
-.content input:hover {
-    background-color: #4f8166;
+.content-home-view input:hover {
+    background-color: var(--logo-hover-darker-green);
 }
+
+/* * Footer --------------------------------------------------------------- */
 
 footer {
     position: fixed;
     bottom: 0;
-    width: 96%;
-    padding: 5px;
-    margin: 1% auto;
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
 }
 
 footer .right {
-    margin: 6px 6px;
     float: right;
 }
 
 footer .right p {
-    margin-top: 0;
-    font-size: 18px;
-    text-align: right;
+    margin: auto;
+    font-size: 20px;
+    padding: 5%;
 }
 
 footer .left {
@@ -112,10 +119,142 @@ footer .left {
 
 footer .left img {
     width: 18px;
-    vertical-align: middle;
 }
 
 footer .left a {
+    font-size: 20px;
+}
+
+/* * RegisterView --------------------------------------------------------------- */
+
+.content-register-view {
+    height: fit-content;
+    width: 80%;
+    grid-template-columns: 30% 60%;
+    max-width: 1200px;
+    display: grid;
+    column-gap: 10%;
+}
+
+.content-register-view .container {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.content-register-view .welcome {
+    margin: auto 0;
+    padding: 40px 0;
+}
+
+.content-register-view .welcome p {
+    font-size: 52px;
+}
+
+.content-register-view span {
+    font-size: 24px;
+}
+
+.content-register-view h4 {
+    margin: 25px auto 5px auto;
+    background-color: var(--box-color-middle-green);
+    color: var(--logo-hover-darker-green);
+}
+
+.content-register-view form {
+    background-color: var(--box-color-middle-green);
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+}
+
+.content-register-view form .inputInfo {
+    background-color: var(--box-color-middle-green);
+    width: 100%;
+    gap: 5px 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 15px;
+}
+
+.content-register-view form label {
+    background-color: var(--box-color-middle-green);
+    font-size: 22px;
+}
+
+.inputInfo div {
+    background-color: var(--box-color-middle-green);
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+@media (max-width: 960px) {
+    .content-register-view {
+        margin: 12% 0;
+        grid-template-columns: 1fr;
+        /* make the form fit the screen */
+        width: calc(100% - 40px);
+        /* center the form */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.inputInfo input {
+    background-color: var(--box-color-middle-green);
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 3.5px solid var(--logo-hover-darker-green);
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.inputInfo input::placeholder {
+    color: var(--logo-hover-darker-green);
+    opacity: 0.5;
     text-align: left;
     font-size: 18px;
+}
+
+.content-register-view .btns {
+    background-color: var(--box-color-middle-green);
+    margin: 20px;
+}
+
+.content-register-view .btns input {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--logo-green);
+    color: var(--background-bright-green);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+    cursor: pointer;
+}
+
+.content-register-view .btns a {
+    background-color: var(--box-color-middle-green);
+}
+
+.content-register-view .btns #login {
+    background-color: var(--background-bright-green);
+    border: 1px solid var(--box-color-middle-green);
+    color: var(--logo-hover-darker-green);
+    font-size: 22px;
+    padding: 2px 12px 6px 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content-register-view .btns #register {
+    font-size: 28px;
+    padding: 5px 25px 10px 25px;
+}
+
+.content-register-view .btns #login:hover {
+    opacity: 0.8;
+}
+
+.content-register-view .btns #register:hover {
+    background-color: var(--logo-hover-darker-green);
 }

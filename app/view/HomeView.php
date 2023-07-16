@@ -1,4 +1,4 @@
-<content class="content">
+<main class="content-home-view">
     <div class="welcome">
         <p>Welcome!</p>
     </div>
@@ -16,4 +16,4 @@
             <input type="submit" name="register" id="register" value="Register">
         </a>
     </div>
-</content>
+</main>

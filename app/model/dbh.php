@@ -1,7 +1,9 @@
 <?php
 
-class Dbh {
-    protected function connect() {
-        
+class Dbh
+{
+    protected function connect()
+    {
+        // $dbh = 
     }
 }

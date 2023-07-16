@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav>
-            <a href="#" id="logo">SmolPaper</a>
-        </nav>
+    <header>
+        <a href="index.php" id="logo">SmolPaper</a>
+    </header>
