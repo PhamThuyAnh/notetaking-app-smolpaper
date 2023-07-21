@@ -9,11 +9,8 @@
         <span id=post-logo>where you can jot down your little notes!</span>
     </div>
     <div class="btns">
-        <a href="index.php?act=login">
-            <input type="submit" name="login" id="login" value="Login">
-        </a>
-        <a href="index.php?act=register">
-            <input type="submit" name="register" id="register" value="Register">
-        </a>
+        <a href="index.php?act=login">Login</a>
+        <a href="index.php?act=register">Register</a>
+
     </div>
 </main>

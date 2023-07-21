@@ -1,4 +1,4 @@
-<main class="content-register-view container">
+<main class="content-view container register-view">
     <div class="welcome">
         <p>Welcome!</p>
         <div class="intro">
@@ -9,10 +9,7 @@
         </div>
     </div>
     <div class="form">
-        <form action="" method="post">
-            <div class='register-form-title'>
-                <h4>CREATE AN ACCOUNT</h4>
-            </div>
+        <form action="" method="post" autocomplete="off">
             <div class="inputInfo">
                 <div id="username">
                     <label for="username">Username</label><br>
@@ -32,12 +29,11 @@
                 </div>
             </div>
             <div class="btns">
-                <a href="index.php?act=register">
-                    <input type="submit" name="register" id="register" value="Register">
+                <a href="#">
+                    <input type="submit" name="submit" id="big" value="Register">
                 </a>
                 <br>
-                <a href="index.php?act=login">
-                    <input type="submit" name="login" id="login" value="Login">
+                <a href="index.php?act=login" id="link-btn">Go to Login</button>
                 </a>
             </div>
         </form>

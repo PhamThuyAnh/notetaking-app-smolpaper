@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,5 +12,13 @@
 
 <body>
     <header>
-        <a href="index.php" id="logo">SmolPaper</a>
+        <div id="logo">
+            <a href="index.php">SmolPaper</a>
+        </div>
+        <div id="navbar">
+            <nav>
+                <a href="index.php?act=take-notes">Take notes</a>
+                <a href="index.php?act=profile">Profile</a>
+            </nav>
+        </div>
     </header>
