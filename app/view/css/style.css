@@ -1,165 +1,172 @@
-@import url("https://fonts.googleapis.com/css2?family=Joti+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Itim&family=Joti+One&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Joti+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Itim&family=Joti+One&display=swap);
+
+*,
+body {
+    margin: 0;
+    padding: 0
+}
+
+*,
+main {
+    text-align: center
+}
+
+footer,
+header {
+    position: fixed;
+    padding: 5px 20px
+}
+
+*,
+.content-view .btns #link-btn {
+    background-color: var(--background-bright-green)
+}
+
+.content-home-view .btns a:hover,
+.content-view .btns input:hover {
+    background-color: var(--logo-hover-darker-green)
+}
 
 :root {
-    /* color */
     --background-bright-green: rgb(243, 255, 224);
     --content-dark-navy: rgb(11, 36, 74);
     --logo-green: rgb(100, 152, 125);
     --logo-hover-darker-green: rgb(54, 101, 76);
     --box-color-middle-green: rgb(213, 237, 203);
-    --error-text-red: rgb(238, 62, 62);
-    /* font */
+    --error-text-red: rgb(209, 65, 65);
     --regular-font: "Itim", cursive;
-    --logo-font: "Joti One", cursive;
+    --logo-font: "Joti One", cursive
 }
 
-/* * General styles  */
-
 * {
-    background-color: var(--background-bright-green);
     color: var(--content-dark-navy);
     font-family: var(--regular-font);
     font-size: 28px;
-    text-align: center;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 main {
     width: 100%;
-    text-align: center;
-    padding: 5%;
+    padding: 7%
 }
 
-/** Header */
-
 header {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-    padding: 5px 20px;
-    box-shadow: rgba(57, 57, 57, 0.24) 0 3px 5px -2px;
+    box-shadow: rgba(57, 57, 57, .24) 0 3px 5px -2px
 }
 
-#logo a,
-#logo {
+#logo,
+#logo a {
     color: var(--logo-green);
     font-family: var(--logo-font);
-    font-size: 32px;
+    font-size: 32px
+}
+
+#navbar a,
+footer .left a {
+    font-size: 20px
 }
 
 header #logo {
     float: left;
     top: 3%;
-    left: 3%;
+    left: 3%
 }
 
-#navbar {
-    float: right;
+#navbar,
+footer .right {
+    float: right
 }
 
 #navbar a {
-    font-size: 20px;
-    padding: 5px 18px;
+    padding: 5px 18px
 }
 
 #navbar a:hover {
     background-color: var(--content-dark-navy);
     color: var(--background-bright-green);
     border-radius: 5px;
-    opacity: 0.9;
+    opacity: .9
 }
 
 @media (max-width: 520px) {
     header #logo {
         float: none;
-        top: 3%;
+        top: 3%
     }
 
     header #navbar {
         float: none;
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 }
 
-/** HomeView */
-
 .content-home-view .welcome p {
-    font-size: 56px;
+    font-size: 56px
 }
 
 .content-home-view .intro {
-    margin: 15px 0;
+    margin: 15px 0
 }
 
 .content-home-view .btns {
-    margin: 30px 0;
+    margin: 30px 0
 }
 
 .content-home-view .btns a {
     margin: 20px;
-    padding: 5px 15px 10px 15px;
+    padding: 5px 15px 10px;
     border: none;
     border-radius: 5px;
     background-color: var(--logo-green);
     color: var(--background-bright-green);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, .24) 0 4px 8px;
+    cursor: pointer
 }
 
-.content-home-view .btns a:hover {
-    background-color: var(--logo-hover-darker-green);
+.content-view .btns,
+.content-view .btns div,
+.content-view form,
+.content-view form .inputInfo,
+.content-view form label,
+.inputInfo div,
+.inputInfo input {
+    background-color: var(--box-color-middle-green)
 }
-
-/** Footer */
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     display: block;
-    padding: 5px 20px;
-    box-shadow: rgba(57, 57, 57, 0.24) 0 -3px 5px -2px;
-}
-
-footer .right {
-    float: right;
+    box-shadow: rgba(57, 57, 57, .24) 0 -3px 5px -2px
 }
 
 footer .right p {
     margin: auto;
     font-size: 20px;
-    padding: 5%;
+    padding: 5%
 }
 
 footer .left {
-    float: left;
+    float: left
 }
 
 footer .left img {
-    width: 18px;
+    width: 18px
 }
-
-footer .left a {
-    font-size: 20px;
-}
-
-/** RegisterView && LoginView*/
 
 .content-view {
     height: fit-content;
@@ -167,161 +174,139 @@ footer .left a {
     max-width: 1200px;
     grid-template-columns: 30% 60%;
     display: grid;
-    column-gap: 10%;
+    column-gap: 10%
 }
 
 .content-view .container {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr))
 }
 
 .content-view .welcome {
     margin: auto 0;
-    padding: 40px 0;
+    padding: 40px 0
 }
 
 .content-view .welcome p {
-    font-size: 52px;
+    font-size: 52px
 }
 
 .content-view span {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .content-view form {
-    background-color: var(--box-color-middle-green);
-    padding: 7px;
-    padding-bottom: 30px;
+    padding: 7px 7px 30px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+    box-shadow: rgba(0, 0, 0, .24) 0 4px 8px
 }
 
 .content-view form .inputInfo {
-    background-color: var(--box-color-middle-green);
     max-width: 90%;
     gap: 10px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 25px 0;
+    padding: 25px 0
 }
 
 .content-view form label {
-    background-color: var(--box-color-middle-green);
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .inputInfo div {
-    background-color: var(--box-color-middle-green);
     text-align: left;
     width: 100%;
-    padding: 5px 20px;
-}
-
-@media (max-width: 960px) {
-    .content-view {
-        margin: 10% 0;
-        grid-template-columns: 1fr;
-        width: calc(100% - 40px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .content-view form .inputInfo {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
+    padding: 4% 6%;
 }
 
 .inputInfo input {
-    background-color: var(--box-color-middle-green);
-    padding-bottom: 5px;
+    padding: 10px;
+    padding-left: 0;
     border: none;
-    border-bottom: 3px solid var(--logo-hover-darker-green);
+    border-bottom: 3px solid var(--logo-green);
     width: 100%;
     text-align: left;
     font-size: 18px;
-    opacity: 0.5;
+    color: #161616;
+    opacity: .8;
 }
 
 .inputInfo input::placeholder {
     color: var(--logo-hover-darker-green);
-    opacity: 0.8;
+    font-style: italic;
+    opacity: .5;
     text-align: left;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .content-view .btns {
-    background-color: var(--box-color-middle-green);
-    margin: 10px;
-    margin-top: 0;
+    margin: 0 10px 10px
 }
 
-.content-view .btns div {
-    background-color: var(--box-color-middle-green);
-}
-
-.content-view .btns input,
-.content-view .btns a {
+.content-view .btns a,
+.content-view .btns input {
     border: none;
     border-radius: 5px;
-    margin: 10px 0;
+    margin-bottom: 20px;
     background-color: var(--logo-green);
     color: var(--background-bright-green);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+    box-shadow: rgba(48, 48, 48, 0.24) 0 4px 8px
 }
 
 .content-view .btns #link-btn {
-    background-color: var(--background-bright-green);
     color: var(--logo-hover-darker-green);
     font-size: 18px;
-    padding: 2px 12px 6px 12px;
-    margin: 20px 7px 10px 7px;
+    padding: 6px 14px;
+    margin: 10px
 }
 
 @media (max-width: 400px) {
     .btns div {
-        display: flex;
+        display: flex
     }
 }
-
 
 .content-view .btns input {
     font-size: 28px;
     width: 160px;
     height: 50px;
-    padding-bottom: 5px;
+    padding-bottom: 5px
 }
 
 .content-view .btns #link-btn:hover {
-    opacity: 0.8;
+    opacity: .8
 }
 
 .content-view .btns input:hover {
-    cursor: pointer;
-    background-color: var(--logo-hover-darker-green);
+    cursor: pointer
 }
-
-.content-view .btns .error {
-    color: red;
-}
-
-/** ForgotPasswordView */
 
 .forgotpwd-view form .guide {
     background-color: var(--box-color-middle-green);
-    padding: 10px;
+    padding: 10px
 }
 
 .forgotpwd-view form p {
     font-style: italic;
     background-color: var(--box-color-middle-green);
     font-size: 20px;
-    opacity: 0.8;
+    opacity: .8;
     width: 90%;
-    margin: auto;
+    margin: auto
 }
 
 @media (max-width: 960px) {
+    .content-view {
+        margin: 10% auto;
+        grid-template-columns: 1fr;
+        width: calc(100% - 40px)
+    }
+
+    .content-view form .inputInfo {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    }
+
     .forgotpwd-view form .inputInfo {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
     }
 }

@@ -12,30 +12,24 @@
         <form action="" method="post">
             <div class="inputInfo">
                 <div id="username">
-                    <label for="email">Email</label><br>
-                    <input type="text" name="email" placeholder="Enter your username"><br>
+	                <label for="email">Email
+		                <input type="text" name="email" placeholder="Enter your username"><br>
+	                </label>
                 </div>
                 <div id="password">
-                    <label for="password">Password</label><br>
-                    <input type="password" name="password" placeholder="Enter your password">
+	                <label for="password">Password
+		                <input type="password" name="password" placeholder="Enter your password">
+	                </label>
                 </div>
             </div>
             <?php
-            if (isset($_POST["login"])) {
-                if ($_POST["email"] == "" || $_POST["password"] == "") {
-                    echo "<p style='font-size:15px; color:rgb(238, 62, 62); background-color: rgb(213, 237, 203);'>" . "Username and Password can't be empty!" . "</p>";
-                } else {
-                    echo $inputEmail = trim($_POST["email"]);
-                    echo $inputPwd = $_POST["password"];
-                }
-            }
+            $loginUser = new UsersController;
+            $loginUser->loginAction();
             ?>
             <div class="btns">
                 <a href="#" id="submit-btn">
-                    <input type="submit" name="login" value="Login">
-                    <br>
+	                <input type="submit" name="submit" value="Login">
                 </a>
-
                 <div>
                     <a href="index.php?act=register" id="link-btn">Register</a>
                     <a href="index.php?act=forgot-password" id="link-btn">Forgot Password</a>

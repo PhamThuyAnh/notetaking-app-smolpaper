@@ -1,0 +1,47 @@
+[33mcommit 751ed4eff016e004bf4a2b5fed51f65e0dbbb35a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Sat Jul 22 00:36:14 2023 +0700
+
+    fix Views
+
+[33mcommit 4918497a77bd774197131a185aaa1acdb8387d87[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Mon Jul 17 03:39:26 2023 +0700
+
+    update index.php, HomeView style, Register style; fix paths
+
+[33mcommit 41aeeba730231974ed6027438ae45321cfa7b887[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Sat Jul 15 21:33:58 2023 +0700
+
+    update the mvc model
+
+[33mcommit adb733675bf31e2f2a41e296e66dad02930ba97b[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Fri Jul 14 08:22:42 2023 +0700
+
+    update some view files
+
+[33mcommit 2b8010519442e681e07c5aea1550fae6b9f72773[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Fri Jul 14 07:20:30 2023 +0700
+
+    update view/home.php
+
+[33mcommit e61ed48a387c48be0d998845a70cf68e744a9620[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Thu Jul 13 05:28:06 2023 +0700
+
+    add register function -unfixed
+
+[33mcommit d089caabd98e0fdb0962cb2756949002adf3e9de[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Thu Jul 13 01:46:43 2023 +0700
+
+    Add the README.md file
+
+[33mcommit 1823bb039aacfef6723151002321d04e2b0b3791[m
+Author: Thuyanh Pham <pta0205@gmail.com>
+Date:   Thu Jul 13 01:30:20 2023 +0700
+
+    Add welcome.php and footer.html
